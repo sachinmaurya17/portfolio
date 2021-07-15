@@ -6,6 +6,8 @@
     padding: 0px;
     box-sizing: border-box;
     list-style: none;
+    word-spacing: 0.6;
+    letter-spacing: 0.6;
 }
 
 html{
@@ -125,13 +127,16 @@ header{
     cursor: pointer;
 }
 
-
-
+.outer-card h1:hover{
+    color: var(--lightgreen);
+   
+}
 
 .footer{
-    margin-top: 30px;
+    margin-top: 100px;
     height: 300px;
-    background-color: var(--lightsky);
+    background-color: var(--black);
+
 }
 
 
@@ -142,6 +147,57 @@ header{
     display: none;
 }
 
+
+
+/* education css part */
+.education{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: var(--darkRed);
+    display:none;
+    height: 100vh;
+}
+.education.active{
+    display: block;
+}
+.education h1{
+    font-size: 50px;
+    color: var(--white);
+
+}
+.education__row{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    background-color: #fff;
+    margin: 30px 10%;
+    border-radius: 20px; 
+}
+.images img{
+    height: 500px;
+    border-radius: 20px;    
+}
+.text-side{
+    margin: 10px 10px;
+    width: 50%;
+    text-align:justify;
+    box-shadow: 2px 2px 3px var(--gray);
+    border-radius: 30px;
+}
+.text-side h3{
+    font-weight:bolder;
+    padding:30px 10px;
+   
+}
+.education>i{
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--white);
+}
 @media (max-width:600px) {
     .container{
         padding: 100px 20px;
@@ -162,7 +218,22 @@ header{
         margin-bottom: 40px;
         margin-left: 40px;
     }
-    
+    .education{
+        height: auto;
+    }
+    .education__row{
+        flex-direction: column;
+        margin: 10px 10px;
+    }
+    .images img{
+        height: 400px;
+        width: 100%;
+    }
+    .text-side{
+        width: 100%;
+        margin:0;
+        box-shadow: none;
+    }
 }
 
 

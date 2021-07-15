@@ -19,16 +19,29 @@
 //     imgs.append(createDiv);
 // });
 
-
+let flag = true
 
 let button = document.querySelector(".primary-btn");
 
 let container = document.querySelector("#container1");
 
-let moreContent = document.querySelector("#moreContent");
-console.log(button);
+let ed = document.querySelector(".education");
 
+let backBtn = document.getElementById("back-btn");
 button.addEventListener("click",() =>{
-    container.style.display = "none";
-    moreContent.style.display ="block";
+    if(flag){
+        container.style.display ="none";
+        ed.classList.add("active");
+        console.log(flag);
+        flag=false;
+        console.log(flag);
+    }
 });
+backBtn.addEventListener("click",()=>{
+    if(flag === false){
+        container.style.display ="block";
+        ed.classList.remove("active");
+        flag = true
+    }
+});
+
