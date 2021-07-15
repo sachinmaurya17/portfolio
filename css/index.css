@@ -42,7 +42,7 @@ header{
     color: var(--lightgreen);
     cursor: pointer;
 }
-.heading-item:nth-child(2){
+.heading-item:nth-child(even){
     color: var(--darkRed);
 }
 .primary-btn,.secondary-btn{

@@ -41,7 +41,7 @@ backBtn.addEventListener("click",()=>{
     if(flag === false){
         container.style.display ="block";
         ed.classList.remove("active");
-        flag = true
+        flag = true;
     }
 });
 
